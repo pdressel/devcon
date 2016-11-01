@@ -16,10 +16,12 @@ spec:
         - containerPort: 3000
         env:
         - name: MONGODB_URL
-          value: mongodb:27017
+          value: mongodb://mongodb-0.mongodb:27017
         - name: NODE_ENV
           value: production
+        - name: PORT
+          value: "3000"
         resources:
           limits:
-            cpu: 500m
-            memory: 1000Mi
+            cpu: 250m
+            memory: 250Mi
