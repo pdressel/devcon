@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: pdressel/devcon:backend
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGODB_URL
+          value: mongodb:27017
+        - name: NODE_ENV
+          value: production
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1000Mi

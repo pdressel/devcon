@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: pdressel/devcon:frontend
+        ports:
+        - containerPort: 3000
+        env:
+        - name: BACKEND_URL
+          value: backend:3000
+        - name: NODE_ENV
+          value: production
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1000Mi

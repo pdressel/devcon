@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "express": "^4.12.2"
+  },
+  "description": "Workshop frontend example",
+  "author": "Philipp Dressel",
+  "license": "UNLICENSED"
+}

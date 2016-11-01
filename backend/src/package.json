@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "express": "^4.12.2",
+    "mongodb": "^2.2.11"
+  },
+  "description": "Workshop backend example",
+  "author": "Philipp Dressel",
+  "license": "UNLICENSED"
+}

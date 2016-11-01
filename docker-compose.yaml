@@ -1,0 +1,22 @@
+version: '2'
+services:
+  frontend:
+    build: frontend
+    ports:
+     - "3000:3000"
+    depends_on:
+     - backend
+    environment:
+     - NODE_ENV=production
+  backend:
+    build: backend
+    ports:
+     - "3001:3000"
+    depends_on:
+     - mongodb
+    environment:
+     - NODE_ENV=production
+  mongodb:
+    image: mongo:3.2
+    ports:
+     - "27017:27017"
