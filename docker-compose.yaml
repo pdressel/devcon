@@ -3,19 +3,23 @@ services:
   frontend:
     build: frontend
     ports:
-     - "3000:3000"
+    - "8080:8080"
     depends_on:
-     - backend
+    - backend
     environment:
-     - NODE_ENV=production
+    - PORT=8080
+    - NODE_ENV=production
+    - BACKEND_URL=http://backend:3000/
   backend:
     build: backend
     ports:
-     - "3001:3000"
+    - "3000:3000"
     depends_on:
-     - mongodb
+    - mongodb
     environment:
-     - NODE_ENV=production
+    - PORT=3000
+    - NODE_ENV=production
+    - MONGODB_URL=mongodb://mongodb:27017
   mongodb:
     image: mongo:3.2
     ports:

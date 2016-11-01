@@ -5,7 +5,8 @@
     "start": "node ./index.js"
   },
   "dependencies": {
-    "express": "^4.12.2"
+    "express": "^4.12.2",
+    "superagent": "^2.3.0"
   },
   "description": "Workshop frontend example",
   "author": "Philipp Dressel",
