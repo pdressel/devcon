@@ -2,6 +2,16 @@ var express = require('express');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
 
+if(!process.env.PORT) {
+	console.log("PORT env not defined")
+	process.exit(1)
+}
+
+if(!process.env.MONGODB_URL) {
+	console.log("MONGODB_URL env not defined")
+	process.exit(2)
+}
+
 app.get('/', function (req, res) {
 	MongoClient.connect(process.env.MONGODB_URL, function(err, db) {
 	  if(err) {
