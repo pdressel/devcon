@@ -99,4 +99,5 @@ kubectl scale deployment backend --replicas=3
 
 ### Do a almost-rolling update of the frontend
 ```
+kubectl apply -f frontend/frontend-deployment2.yaml
 ```
