@@ -97,7 +97,7 @@ kubectl scale deployment frontend --replicas=5
 kubectl scale deployment backend --replicas=3
 ```
 
-### Do a almost-rolling update of the frontend
+### Do a almost-rolling update of the frontend (healthchecks missing!)
 ```
 kubectl apply -f frontend/frontend-deployment2.yaml
 ```
