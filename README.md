@@ -100,4 +100,5 @@ kubectl scale deployment backend --replicas=3
 ### Do a almost-rolling update of the frontend (healthchecks missing!)
 ```
 kubectl apply -f frontend/frontend-deployment2.yaml
+kubectl get pods
 ```
