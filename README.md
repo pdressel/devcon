@@ -66,3 +66,11 @@ kubectl logs <pod name>
 kubectl port-forward <pod name> 8080
 open http://localhost:8080/
 ```
+
+### Create a service to loadbalance the deployed applications
+```
+kubectl create -f frontend/frontend-service.yaml
+kubectl get services
+kubectl create -f backend/backend-service.yaml
+kubectl get services
+```
