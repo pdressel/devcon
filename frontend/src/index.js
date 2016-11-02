@@ -15,9 +15,9 @@ if(!process.env.BACKEND_URL) {
 app.get('/', function (req, res) {
 	request.get(process.env.BACKEND_URL).end(function (err, result) {
     if (err) {
-			res.send('Failed to reach the backend 😐');
+			res.send('Frontend v2: Failed to reach the backend 😐');
 		} else {
-			res.send(`Response from the backend: "${result.text}"`);
+			res.send(`Frontend v2: Response from the backend: "${result.text}"`);
 		}
   });
 });

@@ -91,3 +91,8 @@ kubectl get pods
 kubectl get pvc
 open http://$(minikube ip):<nodeport>
 ```
+### Scale all the things!
+```
+kubectl scale deployment frontend --replicas=5
+kubectl scale deployment backend --replicas=3
+```
