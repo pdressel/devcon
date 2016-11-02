@@ -74,3 +74,9 @@ kubectl get services
 kubectl create -f backend/backend-service.yaml
 kubectl get services
 ```
+
+### Access the frontend from outside the cluster
+```
+kubectl describe service frontend
+open http://$(minikube ip):<nodeport>
+```
