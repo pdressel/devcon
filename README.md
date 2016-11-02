@@ -80,3 +80,14 @@ kubectl get services
 kubectl describe service frontend
 open http://$(minikube ip):<nodeport>
 ```
+
+### Deploy mongodn PetSet
+```
+kubectl create -f mongodb/mongodb-service.yaml
+kubectl create -f mongodb/mongodb-petsete.yaml
+kubectl get services
+kubectl get petsets
+kubectl get pods
+kubectl get pvc
+open http://$(minikube ip):<nodeport>
+```
