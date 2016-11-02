@@ -44,5 +44,5 @@ kubectl describe pod <pod name>
 
 ### Access logs of a pod
 ```
-kubectl logs debug-2143724061-96nyi
+kubectl logs <pod name>
 ```
