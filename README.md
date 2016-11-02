@@ -81,7 +81,7 @@ kubectl describe service frontend
 open http://$(minikube ip):<nodeport>
 ```
 
-### Deploy mongodn PetSet
+### Deploy mongodb PetSet
 ```
 kubectl create -f mongodb/mongodb-service.yaml
 kubectl create -f mongodb/mongodb-petsete.yaml
