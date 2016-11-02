@@ -102,3 +102,13 @@ kubectl scale deployment backend --replicas=3
 kubectl apply -f frontend/frontend-deployment2.yaml
 kubectl get pods
 ```
+
+### Deploy an ingress controller
+```
+kubectl create -f controller.yaml
+kubectl create -f frontend/frontend-ingress.yaml
+kubectl get ingresses
+<edit /etc/hosts to resolve frontend.workshop to minkube ip>
+kubectl describe service nginx-ingress-lb
+open http://frontend.workshop:<nginx-ingress-lb nodeport>
+```
