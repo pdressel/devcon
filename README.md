@@ -56,3 +56,13 @@ kubectl logs <pod name>
 kubectl port-forward <pod name> 8080
 open http://localhost:8080/
 ```
+
+### Deploy the backend application
+```
+kubectl create -f backend/backend-deployment.yaml
+kubectl get deployments
+kubectl get pods
+kubectl logs <pod name>
+kubectl port-forward <pod name> 8080
+open http://localhost:8080/
+```
