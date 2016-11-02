@@ -28,3 +28,10 @@ kubectl get pods
 `kubectl version`
 
 `kubectl get nodes`
+
+### Scale deployments
+```
+kubectl get deployments
+kubectl scale deployment debug --replicas=3
+kubectl get deployments
+```
