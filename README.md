@@ -96,3 +96,7 @@ open http://$(minikube ip):<nodeport>
 kubectl scale deployment frontend --replicas=5
 kubectl scale deployment backend --replicas=3
 ```
+
+### Do a almost-rolling update of the frontend
+```
+```

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 1
+  replicas: 5
   template:
     metadata:
       labels:
@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: pdressel/devcon:frontend
+        image: pdressel/devcon:frontend2
         ports:
         - containerPort: 8080
         env:
