@@ -84,7 +84,7 @@ open http://$(minikube ip):<nodeport>
 ### Deploy mongodb PetSet
 ```
 kubectl create -f mongodb/mongodb-service.yaml
-kubectl create -f mongodb/mongodb-petsete.yaml
+kubectl create -f mongodb/mongodb-petset.yaml
 kubectl get services
 kubectl get petsets
 kubectl get pods
