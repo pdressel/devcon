@@ -50,4 +50,9 @@ kubectl logs <pod name>
 ### Deploy the frontend application
 ```
 kubectl create -f frontend/frontend-deployment.yaml
+kubectl get deployments
+kubectl get pods
+kubectl logs <pod name>
+kubectl port-forward <pod name> 8080
+open http://localhost:8080/
 ```
