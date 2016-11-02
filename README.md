@@ -16,3 +16,11 @@ kubectl get pods
 ```
 ### View the dashboard
 `minikube dashboard`
+
+### Install kubectl
+`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/linux/amd64/kubectl` for linux
+`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/darwin/amd64/kubectl` for mac os
+
+### check that kubectl is working
+`kubectl version`
+`kubectl get nodes`
