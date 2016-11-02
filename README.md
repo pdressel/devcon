@@ -41,3 +41,8 @@ kubectl get deployments
 kubectl get pods
 kubectl describe pod <pod name>
 ```
+
+### Access logs of a pod
+```
+kubectl logs debug-2143724061-96nyi
+```
