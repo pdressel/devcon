@@ -1,5 +1,8 @@
 # DevCon16 Kubernetes Workshop
 
+## Install minikube
+https://github.com/kubernetes/minikube/releases/tag/v0.12.0
+
 ## Start a cluster
 `minikube start`
 
