@@ -46,3 +46,8 @@ kubectl describe pod <pod name>
 ```
 kubectl logs <pod name>
 ```
+
+### Deploy the frontend application
+```
+kubectl create -f frontend/frontend-deployment.yaml
+```
