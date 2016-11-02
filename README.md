@@ -35,3 +35,9 @@ kubectl get deployments
 kubectl scale deployment debug --replicas=3
 kubectl get deployments
 ```
+
+### Check running instances of application
+```
+kubectl get pods
+kubectl describe pod <pod name>
+```
