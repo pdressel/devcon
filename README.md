@@ -3,6 +3,10 @@
 ## Install minikube
 https://github.com/kubernetes/minikube/releases/tag/v0.12.0
 
+### Install kubectl
+`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/linux/amd64/kubectl` for Linux
+`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/darwin/amd64/kubectl` for Mac OS
+
 ## Start a cluster
 `minikube start`
 
@@ -19,10 +23,6 @@ kubectl get pods
 ```
 ### View the dashboard
 `minikube dashboard`
-
-### Install kubectl
-`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/linux/amd64/kubectl` for linux
-`curl -O https://storage.googleapis.com/kubernetes-release/release/v1.4.3/bin/darwin/amd64/kubectl` for mac os
 
 ### Check that kubectl is working
 `kubectl version`
@@ -63,7 +63,7 @@ kubectl create -f backend/backend-deployment.yaml
 kubectl get deployments
 kubectl get pods
 kubectl logs <pod name>
-kubectl port-forward <pod name> 8080
+kubectl port-forward <pod name> 3000
 open http://localhost:8080/
 ```
 
@@ -111,4 +111,9 @@ kubectl get ingresses
 <edit /etc/hosts to resolve frontend.workshop to minkube ip>
 kubectl describe service nginx-ingress-lb
 open http://frontend.workshop:<nginx-ingress-lb nodeport>
+```
+
+### Stop minikube
+```
+minikube stop
 ```
