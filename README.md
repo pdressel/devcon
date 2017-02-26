@@ -81,12 +81,12 @@ kubectl describe service frontend
 open http://$(minikube ip):<nodeport>
 ```
 
-### Deploy mongodb PetSet
+### Deploy mongodb StatefulSet
 ```
 kubectl create -f mongodb/mongodb-service.yaml
-kubectl create -f mongodb/mongodb-petset.yaml
+kubectl create -f mongodb/mongodb-statefulset.yaml
 kubectl get services
-kubectl get petsets
+kubectl get statefulsets
 kubectl get pods
 kubectl get pvc
 open http://$(minikube ip):<nodeport>
